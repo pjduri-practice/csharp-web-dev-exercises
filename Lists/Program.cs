@@ -1,11 +1,9 @@
 ﻿//Exercises: Control Flow & Collections
 
 //TODO: Write your code for List Practice below:
+using System.Linq;
 
 Console.WriteLine("Hello, Lists!");
-
-
-using System.Linq;
 
 static double findSum(List<double> numbers)
 {
