@@ -15,23 +15,4 @@ Student rob = new Student("Rob");
 Student jak = new Student("Jak");
 Student bill = new Student("Bill");
 
-//Console.WriteLine(joe.StudentId);
-//Console.WriteLine(rob.StudentId);
-//Console.WriteLine(jak.StudentId);
-//Console.WriteLine(bill.StudentId);
-PropertyInfo[] info;
-
-info = bill.GetType().GetProperties();
-
-for (int i = 0; i < info.Length; i++)
-{
-    Console.WriteLine(info[i].ToString());
-}
-
-public IEnumerator<PropertyInfo> GetEnumerator()
-{
-    foreach (var property in typeof(Student).GetProperties())
-    {
-        yield return property;
-    }
-}
+Console.WriteLine(bill.listStudentInfo());

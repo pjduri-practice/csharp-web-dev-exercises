@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Net.NetworkInformation;
+using System.Runtime.CompilerServices;
 
 namespace Classes;
 
@@ -26,5 +27,13 @@ public class Student
     {
         nextId++;
     } 
+
+    public string listStudentInfo()
+    {
+        return $"Name: {Name}\n" +
+            $"Student ID: {StudentId}\n" +
+            $"Credits: {NumberOfCredits}\n" +
+            $"GPA: {Gpa}";
+    }
 
 }
