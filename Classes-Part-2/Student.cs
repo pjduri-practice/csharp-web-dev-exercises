@@ -1,7 +1,7 @@
 ﻿using System;
 namespace Classes_Part_2
 {
-	public class Student
+    public class Student
 	{
         private static int nextStudentId = 1;
         public string Name { get; set; }
@@ -62,8 +62,24 @@ namespace Classes_Part_2
         // TODO: Add your custom 'ToString' method here. Make sure it returns a well-formatted string rather
         //  than just the class fields.
 
+
         // TODO: Add your custom 'Equals' method here. Consider which fields should match in order to call two
         //  Student objects equal.
+        public override bool Equals(object? obj)
+        {
+            return obj is Student student &&
+                   StudentId == student.StudentId;
+        }
+
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(StudentId);
+        }
+
+        public override string? ToString()
+        {
+            return base.ToString();
+        }
     }
 }
 
